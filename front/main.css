@@ -1,0 +1,75 @@
+html {
+	width: 100%;
+	height: 100%;
+	font-size: 1em;
+	font-family: sans-serif;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+form {
+	box-sizing: border-box;
+	min-width: 360px;
+	padding: 1em;
+	box-shadow: hsla(0, 0%, 0%, 0.3) 0 1px 3px;
+	display: grid;
+	grid-gap: 1em;
+	grid-template-areas:
+		"legend"
+		"email"
+		"password"
+		"submit";
+}
+
+label {
+	display: block;
+}
+
+input {
+	display: block;
+	width: 100%;
+	height: calc(1em * 1.9);
+	display: block;
+	background: hsla(240, 100%, 27%, 0.1);
+	font-size: 1em;
+	box-shadow: none;
+	border: none;
+}
+
+button {
+	width: 100%;
+	position: relative;
+	background-color: transparent;
+	border: 1px solid darkblue;
+	font-size: 1em;
+	color: darkblue;
+	padding: 1em;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.item__legend {
+	grid-area: legend;
+	margin: 0;
+	padding: 0;
+}
+
+.item__email {
+	grid-area: email;
+}
+
+.item__password {
+	grid-area: password;
+}
+
+.item__submit {
+	grid-area: submit;
+}

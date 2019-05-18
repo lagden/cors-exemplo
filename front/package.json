@@ -1,0 +1,19 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "Frontend de exemplo do CORS",
+  "main": "index.html",
+  "scripts": {
+    "start": "ws -p 3131"
+  },
+  "keywords": [
+    "CORS",
+    "frontend",
+    "exemplo"
+  ],
+  "author": "Thiago Lagden",
+  "license": "MIT",
+  "dependencies": {
+    "local-web-server": "2.6.1"
+  }
+}

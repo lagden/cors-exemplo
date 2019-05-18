@@ -1,0 +1,27 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "Backend de exemplo do CORS",
+  "main": "index.js",
+  "scripts": {
+    "start": "DEBUG=exemplo_cors:* nodemon index.js"
+  },
+  "keywords": [
+    "cors",
+    "backend",
+    "exemplo"
+  ],
+  "author": "Thiago Lagden",
+  "license": "MIT",
+  "dependencies": {
+    "@koa/cors": "3.0.0",
+    "debug": "4.1.1",
+    "koa": "2.7.0",
+    "koa-bodyparser": "4.2.1",
+    "koa-compose": "4.1.0",
+    "koa-router": "7.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "1.19.0"
+  }
+}
