@@ -11,7 +11,7 @@ const optionsCORS = {}
 const app = new Koa()
 app
 	.use(errorHandling)
-	// .use(cors(optionsCORS))
+	.use(cors(optionsCORS))
 	.use(routes)
 	.on('error', debug.error)
 
