@@ -17,10 +17,13 @@ function bloqueado(ctx) {
 console.log(helmet.contentSecurityPolicy.toString())
 
 router
-	.get('/liberado', liberado)
+	.get('/liberado', helmet.contentSecurityPolicy({
+		directives: {
+			'child-src': ['*']
+		}
+	}), liberado)
 	.get('/bloqueado', helmet.contentSecurityPolicy({
 		directives: {
-			'frame-src': ["'self'"],
 			'frame-ancestors': ["'none'"]
 		}
 	}), bloqueado)

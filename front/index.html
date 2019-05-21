@@ -11,8 +11,16 @@
 </head>
 
 <body>
-	<iframe src="http://[::1]:3000/liberado" class="liberado"></iframe>
-	<iframe src="http://[::1]:3000/bloqueado" class="bloqueado"></iframe>
+	<iframe id="liberado" src="http://127.0.0.1:3000/liberado" class="liberado"></iframe>
+	<iframe src="http://127.0.0.1:3000/bloqueado" class="bloqueado"></iframe>
+
+	<script>
+		const liberado = document.querySelector('#liberado')
+		liberado.addEventListener('load', () => {
+			const doc = liberado.contentDocument || liberado.contentWindow.document
+			console.log(doc) // Erro, pois não estão na mesma origem. 127.0.0.1:3000 !== 127.0.0.1:3131
+		})
+	</script>
 </body>
 
 </html>
