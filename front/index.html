@@ -6,26 +6,13 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#000000">
-	<title>Exemplo CORS</title>
+	<title>Exemplo Iframe</title>
 	<link href="./main.css" rel="stylesheet">
-	<script async src="./send.js" type="module"></script>
 </head>
 
 <body>
-	<form id="enterMatrix" action="http://[::1]:3000/endpoint" method="post">
-		<h3 class="item__legend">Enter the Matrix</h3>
-		<div class="item__email">
-			<label for="email">Email</label>
-			<input type="email" name="email" id="email" autocomplete="email" required>
-		</div>
-		<div class="item__password">
-			<label for="password">Password</label>
-			<input type="password" name="password" id="password" autocomplete="current-password" required>
-		</div>
-		<div class="item__submit">
-			<button type="submit">Log in</button>
-		</div>
-	</form>
+	<iframe src="http://[::1]:3000/liberado" class="liberado"></iframe>
+	<iframe src="http://[::1]:3000/bloqueado" class="bloqueado"></iframe>
 </body>
 
 </html>
