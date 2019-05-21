@@ -14,8 +14,15 @@ function bloqueado(ctx) {
 	ctx.body = '<h1>Bloqueado</h1>'
 }
 
+console.log(helmet.contentSecurityPolicy.toString())
+
 router
 	.get('/liberado', liberado)
-	.get('/bloqueado', helmet(), bloqueado)
+	.get('/bloqueado', helmet.contentSecurityPolicy({
+		directives: {
+			'frame-src': ["'self'"],
+			'frame-ancestors': ["'none'"]
+		}
+	}), bloqueado)
 
 module.exports = router
